@@ -1,0 +1,105 @@
+<van-tabs sticky>
+  <van-tab title="最新单曲">
+  <!-- 按钮组 -->
+  <view class="btns">
+    <view class="btn1">
+      <van-button color="#AF9C7C" icon="play"  round type="info">全部播放</van-button>
+    </view>
+    <view>
+      <van-button icon="down" round type="info">下载播放</van-button>
+    </view>
+  </view>
+  <!-- 中间内容 -->
+   <view class="bodycontent" wx:for="{{list}}" wx:key="index">
+    <view class="images">
+    <!-- 左边图片 -->
+      <image src="{{item.avatar_s130}}"></image> 
+    </view>
+    <!-- 右边文字 -->
+    <view class="rightText">
+      <!-- 文章标题 --> 
+      <view class="title">{{item.album_title}}</view>
+      <!-- 华语流行 -->
+      <view class="twoContent">
+      {{item.author}}
+      </view>
+    </view>
+  <!-- 歌曲时长 -->
+    <view class="timer">
+      {{(item.file_duration-item.file_duration%60)/60+'分'+item.file_duration%60+'秒'}}
+    </view>
+  
+  </view>
+  </van-tab>
+  <van-tab title="最新歌单">
+    <view class="btns">
+      <view class="btn1">
+        <van-button color="#AF9C7C" icon="play" round type="info">全部播放</van-button>
+      </view>
+  </view>
+
+  <!-- 中间内容 -->
+  <view class="bodycontent" wx:for="{{list1}}" wx:key="index">
+    <view class="images">
+    <!-- 左边图片 -->
+      <image src="{{item.list_pic}}"></image> 
+    </view>
+    <!-- 右边文字 -->
+    <view class="rightText">
+      <!-- 文章标题 -->
+      <view class="title">{{item.list_title}}</view>
+      <!-- 华语流行 -->
+      <view class="twoContent">
+        {{item.style_tag}}
+      </view>
+      <!-- 图片加歌手 -->
+      <view class="photoAndsinger">
+      <view class="photo">
+      <van-image
+        round
+        width="38rpx"
+        height="38rpx"
+        src="{{item.userinfo.userpic_small}}"
+      />
+      </view>
+      <view class="singer">
+        {{item.userinfo.username}}
+      </view>
+      </view>
+    </view>
+        <view class="timer">
+        {{item.song_num}}首单曲
+      </view>
+    </view>
+ 
+  </van-tab>
+  <van-tab title="最新场景">
+    <!-- 内容 -->
+    <view class="scenario" bindtap="jumpScenarioIndex"  wx:for="{{list2}}" wx:key="index" data-id="{{item.label_id}}" style="background-color:#{{item.bg_color}}">
+      <!-- 上面图片 -->
+      <view class="scenarioImage">
+        <image style="width:100%" src="{{item.pic}}"></image>
+        <!-- 播放图片 -->
+        <view class="player">
+          <van-icon name="play-circle-o" size="40px" />
+        </view>
+      </view>
+      <!-- 下面文字标题 -->
+      <view class="scenarioTitle">{{item.title}}</view>
+      <!-- 第三行内容 -->
+      <view class="scenarioText">
+        {{item.desc}}
+      </view>
+      <view class="scenarioContent">
+        <van-row>
+          <van-col span="1"><van-icon name="star" /></van-col>
+          <van-col span="7">{{item.listen_num}}人正在收听</van-col>
+          <van-col span="16">{{item.style_score}}</van-col>
+        </van-row>
+      </view>
+      
+    </view>
+  </van-tab>
+   <van-tab title="" name="d"></van-tab>
+   
+</van-tabs>

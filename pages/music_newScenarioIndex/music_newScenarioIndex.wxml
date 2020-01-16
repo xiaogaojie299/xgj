@@ -1,0 +1,47 @@
+<view class="contai">
+  <!-- 首页标题 -->
+  <view class="title">{{list.label_info.title}}</view>
+  <!-- 50%电游动漫 -->
+  <view class="text">{{list.label_info.style}}</view>
+  <!-- 下面内容 -->
+  <view class="content">{{list.label_info.desc}}</view>
+  <!-- table标签页 -->
+  <view class="vanTab">
+    <van-tabs sticky bind:change="onChange">
+    <!-- tab组件 -->
+      <van-tab title="{{item.title}}" wx:for="{{list.label_info.rec_label}}" wx:key="index" >
+      <!-- 播放按钮 -->
+      <view class="btn1">
+        <van-button color="#AF9C7C" icon="play" round type="info">播放{{item.title}}</van-button>
+      </view>
+        <!-- 下面布局 -->
+          <view class="box">  
+          <view class="onebox" wx:for="{{list1}}" wx:key="index">      
+            <!-- 中间图片 -->
+            <view class="boxImages"><image src="{{item.list_pic_small}}"></image></view>
+            <!-- 中间标题 -->
+            <view class="boxTitle">{{item.title}}</view>
+            <!-- 详情 -->
+            <view class="boxDetail">{{item.song_num}}首单曲 | {{item.style_tag}}</view>
+            <!-- 歌手+照片 -->
+            <view class="imgAndsinger">
+                <!-- 原型小图 -->
+                <view class="smallImage">
+                  <van-image
+                    round
+                    width="38rpx"
+                    height="38rpx"
+                    src="{{item.list_pic_small}}"
+                  />
+                </view>
+                <!-- 歌手 -->
+                <view class="singer">{{item.username}}</view>
+            </view>
+            
+         </view>
+      </view>
+
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

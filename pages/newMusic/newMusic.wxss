@@ -1,0 +1,102 @@
+/* pages/newMusic/newMusic.wxss */
+/* 中间内容 */
+  .bodycontent{
+    display: flex;
+    padding: 22rpx;
+  }
+  /* 左边图片 */
+  .images{
+    margin-right:50rpx;
+  }
+  .images>image{
+    width:126rpx;
+    height:126rpx;
+  }
+  /* 右边文字 */
+  .rightText{
+    width: 200rpx;
+  }
+  /* 右边文字标题 */
+  .title{
+    font-size: 32rpx;
+    font-weight:bold ;
+    color:red;
+    /* 显示一行，多余的用省略号 */
+    display: inline-block;
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+  }
+  .twoContent{
+    font-size: 26rpx;
+  }
+  /* 歌曲时长 */
+  .timer{
+    margin:20rpx auto;
+    color:lightgray;
+  }
+  /* 按钮 */
+button:not([size='mini']) {
+width: 112px !important;
+min-height: 20rpx !important;
+}
+.btns{
+  display: flex;
+  margin:12rpx;
+}
+.btn1{
+  margin: 0 12rpx
+}
+.photoAndsinger{
+  display: flex;
+  padding-top:10rpx; 
+}
+.photoAndsinger >.singer{
+  font-size: 26rpx;
+  margin-left: 28rpx;
+}
+
+/* 最新场景 */
+/* 最外层div */
+.scenario{
+  margin:28rpx 0;
+  padding: 12rpx;
+}
+/* 上面图片 */
+.scenarioImage{
+  position: relative;
+}
+ /* 下面文字标题 */
+.scenarioTitle{
+  font-size: 32rpx;
+  font-weight:bold;
+  margin:10rpx 0;
+  }
+/* 第三行内容 */
+.scenarioText{
+    font-size: 26rpx;
+    color: lightgrey;
+   /* 显示一行，多余的用省略号 */
+    display: inline-block;
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.scenarioContent{
+  font-size: 26rpx;
+  color: #ddd;
+}
+/* 图片左下角播放 */
+.player{
+  
+  position: absolute;
+  right:80rpx;
+  top:65%
+}
+
+/* 样式激活类 */
+.tab-active-class{
+  color:red;
+}

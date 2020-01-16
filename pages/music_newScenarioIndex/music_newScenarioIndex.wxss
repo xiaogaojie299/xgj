@@ -1,0 +1,72 @@
+/* pages/music_newScenarioIndex/music_newScenarioIndex.wxss */
+/* 首页标题 */
+.contai{
+  padding:14px;
+}
+.title{
+  margin-top:12rpx;
+  font-size: 42rpx;
+  font-weight:bold;
+}
+/* 50%电游动漫  */
+.text{
+  font-size: 26rpx;
+  color: #ddd;
+  margin:12rpx 0;
+}
+/*  */
+.vanTab{
+  margin-top:40px;
+}
+/* 按钮 */
+.btn1{
+  margin:16px 0;
+}
+/* 下面内容 */
+.content{
+  font-size: 30rpx;
+  color:black;
+}
+
+/* 下面布局 */
+.box{
+  display: flex;
+  flex-wrap: wrap;
+}
+.onebox{
+  width:45%; 
+  margin:10rpx;
+  height:100%;
+}
+/* 中间图片 */
+.boxImages{
+  margin-bottom: 12rpx;
+}
+.boxImages>image{
+  width: 100%;
+  height:150px;
+}
+/* 中间标题 */
+.boxTitle{
+  font-size: 30rpx;
+  font-weight:bold;
+}
+/* 详情 */
+.boxDetail{
+  color:lightgrey;
+  font-size: 22rpx;
+  margin:20rpx 0;
+}
+/* 歌手+照片 */
+.imgAndsinger{
+  display: flex;
+}
+/* 原型小图 */
+.smallImage{
+
+}
+/* 歌手 */
+.singer{
+  font-size: 26rpx;
+  margin-left: 28rpx;
+}
